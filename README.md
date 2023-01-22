@@ -3,7 +3,7 @@
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
-        int strt=nums[0];
+        int strt=0;
         int end=nums.size()-1;
 
         if(nums.size()==0){
@@ -15,7 +15,7 @@ public:
             if(nums[mid]==target){
                 return mid;
             }   
-            else if(target<mid)
+            else if(target<nums[mid])
             {
                end=mid-1;
             }
